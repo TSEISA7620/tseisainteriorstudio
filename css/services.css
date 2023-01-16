@@ -1,0 +1,110 @@
+.services{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 0px 7%;
+}
+
+h4{
+    margin-top: 100px;
+    color: #939393;
+    text-align: center;
+}
+
+h5{
+    margin-block-start: 20px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 100;
+}
+
+.services .dots{
+    font-weight: bolder;
+    font-size: 16px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.offers{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 25px;
+}
+.offers .col{
+    text-align: center;
+    min-height: 300px;
+    background-color: #939393;
+    padding: 40px;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    transition: 0.4s ease-in-out;
+}
+
+.col:first-child{
+    background: url("../images/bg-iconbox2.jpg") no-repeat center center/cover;
+}
+.col:first-child:hover{
+    background: url("../images/bg-iconbox2-hover.jpg") no-repeat center center/cover;
+}
+
+.col:nth-child(2){
+    background: url("../images/bg-iconbox3.jpg") no-repeat center center/cover;
+}
+.col:nth-child(2):hover{
+    background: url("../images/bg-iconbox3-hover.jpg") no-repeat center center/cover;
+}
+
+
+.col:last-child{
+    background: url("../images/bg-iconbox1.jpg") no-repeat center center/cover;
+}
+.col:last-child:hover{
+    background: url("../images/bg-iconbox1-hover.jpg") no-repeat center center/cover;
+}
+
+.col:hover > .header{
+    color: #fff;
+}
+.col img{
+    margin: 0px auto;
+}
+
+.col .header{
+    color: #343434;
+    margin-block-start: 2em;
+    font-size: 1.6em;
+    transition: 0.4s ease-in-out;
+}
+.col .body{
+    margin-block-start: 1em;
+    color: #949494;
+}
+
+@media screen and (max-width: 768px) {
+    .services{
+        display: block;
+    }
+
+    .offers{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .offers .col:last-child{
+        transform: translate(50%);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .offers{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+    .offers .col:last-child{
+        transform: translate(0%);
+    }
+}

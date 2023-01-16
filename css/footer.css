@@ -1,0 +1,84 @@
+footer{
+    margin-top: 40px;
+    background-color: #1A1A1A;
+    background: url("../images/bg2-process.jpg") no-repeat center center/cover;
+    width: 100%;
+}
+a{
+    color: #808080;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+a:hover{
+    color: #E3DFE3;
+}
+.wrapper{
+    padding: 70px 7% 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+}
+
+
+.container img{
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.container p{
+    color: #808080;
+    margin-bottom: 20px;
+}
+
+.container .header{
+    font-size: 1.3em;
+    font-weight: 300;
+    margin: 30px 0px 45px;
+    color: #E3DFE3;
+}
+
+.info{
+    display: flex;
+    color: #808080;
+}
+.info i{
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.info p{
+    color: #808080;
+    transition: 0.3S ease;
+}
+.info p:hover{
+    color: #E3DFE3;
+}
+
+.base{
+border-top: #808080 1px solid;
+padding: 20px 7%;
+}
+.base p{
+    color: #808080;
+    display: inline;
+}
+.base a{
+    color: #E3DFE3;
+    transition: 0.3S ease;
+}
+.base a:hover{
+    color: #808080;
+}
+@media screen and (max-width: 768px) {
+    footer{
+        display: block;
+    }
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
+}

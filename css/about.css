@@ -1,0 +1,130 @@
+.about{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.founder{
+    color: white;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color: #1A1A1A;
+    background: url("../images/bg1-home1.jpg") no-repeat center center/cover;
+    width: 100%;
+    padding: 0px 7%;
+    min-height: 300px;
+    gap: 40px;
+}
+.founder .me{
+    gap: 40px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.founder h2{
+    font-weight: 100;
+    text-align: right;
+    line-height: 2;
+    width: 40%;
+}
+.image{
+    height: 140px;
+    width: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+.image img{
+    width: 100%;
+    height: auto;
+}
+
+.names h3{
+font-size: 1.5em;
+margin-bottom: 20px;
+}
+.names p{
+    font-weight: 200;
+    color: #f1f1f1;
+}
+
+.about-body{
+    padding: 0px 7%;
+    margin-top: 30px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,auto);
+}
+.about-body .pic{
+    height: auto;
+    aspect-ratio: 1/1;
+    width: 420px;
+    overflow: hidden;
+    background-color: #1A1A1A;
+    background: url("../images/bathtub.jpg") no-repeat center center/cover;
+    border-radius: 50%;
+}
+.about-body .text{
+    padding-left: 100px;
+}
+.text h4{
+    margin-top: 50px;
+    color: #939393;
+    text-align: left;
+}
+.text h5{
+    margin-block-start: 1.5rem;
+    margin-block-end: 1.5rem;
+    font-size: 2.7em;
+    font-weight: 100;
+    text-align: left;
+}
+.text p{
+    color: #939393;
+    line-height: 1.6;
+    font-size: 1.2em;
+}
+.text .dots{
+    font-weight: bolder;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+    .founder{
+        padding: 70px 3% 50px;
+        display: block;
+    }
+
+    .founder h2 {
+        font-weight: 100;
+        text-align: left;
+        line-height: 2;
+        width: 100%;
+    }
+    .about-body{
+        margin-top: 30px;
+        padding: 0px 3%;
+        display: block;
+    }
+    .about-body .pic{
+        margin: 0px auto;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+    .about-body .text{
+        padding-left: 0;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .founder .me{
+        gap: 40px;
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}

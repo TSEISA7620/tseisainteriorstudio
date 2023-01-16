@@ -1,0 +1,194 @@
+header{
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.641);
+    transition: all 1s;
+    animation: animate 1s forwards 0s;
+}
+  
+#menu{
+    padding: 0px 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+#menu #close-btn{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 50px;
+    background: transparent;
+    color: white;
+    display: none;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    transition: display 1s ease-in;
+}
+
+#menu #toggle-btn{
+    width: 34px;
+    height: 26px;
+    position: relative;
+    background: none;
+    color: black;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+    transition: display 1s ease-in-out;
+}
+
+#toggle-btn .icon-bar{
+    background: rgb(255, 255, 255);
+    height: 2px;
+    width: 100%;
+}
+
+#menu img{
+    height: 40px;
+    width: auto;
+}
+
+ul{
+    display: flex;
+
+}
+
+#menu ul li{
+    padding: 5px;
+    list-style: none;
+    margin:0px 10px;
+    position: relative;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 0.9em;
+}
+
+li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+#menu ul .btn{
+    border-right: none;
+}
+#menu ul .btn a{
+    color: white;
+    background: black;
+    padding: 10px 20px;
+    border-right: none;
+    border-radius:12px;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#menu ul .btn a:hover{
+    background-color: transparent;
+    color: black;
+    font-weight: normal;
+    border: 2px black solid;
+    transition: all 0.4s;
+}
+/*responsive*/
+@media screen and (max-width: 1024px) {
+    header{
+        z-index: 10;
+        transition: all 1s;
+    }
+
+    #menu{
+        padding: 0px 20px;
+    }
+
+    #menu img{
+        height: 30px;
+        width: auto;
+    }
+
+    #menu #toggle_links{
+        background-color: #737373b7;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-height: 100vh;
+        width: 70%;
+        padding: 80px 10px;
+        z-index: 8;
+        transition: 1s ease;
+        transform: translateX(500px);
+        animation: nav_in 1s forwards 0s;
+    }
+    #menu ul li{
+        margin-top: 30px;
+        text-align: left;
+        margin-left:0px;
+    }
+
+    #menu #toggle-btn{
+        display: flex;
+    }
+
+    #menu ul li a,
+    #menu ul li .a{
+        color: white;
+        font-size: 1em;
+    }
+
+    #menu ul .btn a{
+        color:black ;
+        background:  white;
+        padding: 10px 20px;
+        border-right: none;
+        border-radius:12px;
+        cursor: pointer;
+        pointer-events: all;
+    }
+}
+
+/*key frames*/
+@keyframes nav_in{
+
+    from{
+        transform: translateX(500px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes animate {
+    from{
+        margin-top: -100px;
+    }
+
+    to{
+        margin-top: 0px;
+    }
+}
